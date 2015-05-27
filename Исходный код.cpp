@@ -1,18 +1,21 @@
 # -#include <iostream>
+#include <locale.h>
 #include <stdlib.h>
 #include <conio.h>
 using namespace std;
 void main()
-{ cout<<"Kollichestvo:";
+{ 
+	setlocale(0, "Russian");
+	cout<<"Кол-во:";
 int n;
 cin>>n;
 int *a=(int*)malloc(n*sizeof(int));
 for (int i=0; i<n; i++)
 	cin>>a[i];
-cout<<"\ndo sortirovki\n";
+cout<<"\n до сортировки\n";
 for (int i=0; i<n; i++)
 	cout<<" "<<a[i];
-cout<<"\nposle sortirovki\n";
+cout<<"\n после сортировки\n";
 for (int j=0; j<(n-1); j++)
 	for (int i=0; i<(n-1-j); i++)
 		{ 
